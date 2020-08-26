@@ -15,6 +15,7 @@ Prerequisites
 # Precompiled Headers
 *.gch
 *.pch
+
 # Libraries
 *.lib
 *.a
@@ -26,6 +27,7 @@ Prerequisites
 *.so
 *.so.*
 *.dylib
+
 # Executables
 *.exe
 *.out
