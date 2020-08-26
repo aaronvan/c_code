@@ -1,7 +1,7 @@
-sizeof() -> gets the size of
-[]    -> array subscript
-&     -> the address of
-*     -> the value of
-->    -> struct dereference
-.     -> struct reference
+sizeof()  gets the size of
+[]     array subscript
+&      the address of
+*      the value of
+->     struct dereference
+.      struct reference
 
