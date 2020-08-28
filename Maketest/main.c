@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "test.h"
 
@@ -13,5 +14,5 @@ int main(int argc, char *argv[]) {
     int d = square(a);
     printf("%d\n", d);
 
-    return 0;
+    return EXIT_SUCCESS;
 }
