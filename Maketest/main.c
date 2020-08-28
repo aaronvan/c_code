@@ -10,8 +10,8 @@ int main(int argc, char *argv[]) {
     int c = add(a, b);
     printf("%d\n", c);
 
-    int c = square(a);
-    printf("%d\n", c);
+    int d = square(a);
+    printf("%d\n", d);
 
     return 0;
 }
