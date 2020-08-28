@@ -28,6 +28,7 @@ int can_print_it(char ch) {
 }
 
 int main(int argc, char *argv[]) {
-    print_arguments(argc + 1, argv);
+    print_arguments(argc, argv);
+
     return EXIT_SUCCESS;
 }
