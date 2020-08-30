@@ -11,5 +11,9 @@ int main(void) {
 
     printf("num = %d, numPtr = %p, address of num: %p, num2 = %d\n", num, numPtr, &num, num2);
 
+    char *names[] = {"aaron", "deede"};
+    int count = sizeof(names)/sizeof(char);
+    printf("%d\n", count);
+
     return 0;
 }
