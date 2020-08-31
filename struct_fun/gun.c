@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <assert.h>
 
 typedef struct Gun {
@@ -12,7 +13,7 @@ gun_t *gunMake(char *name, int calibre, int range) {
     gun_t *gun = malloc(sizeof(gun_t));
     assert(gun != NULL);
 
-    gun->name = name;
+    gun->name = strdup(name);
     gun->calibre = calibre;
     gun->range = range;
 
@@ -26,6 +27,7 @@ void gunPrint(gun_t *gun) {
 }
 
 void gunDestroy(gun_t *gun) {
+    free(gun->name);
     free(gun);
 }
 
