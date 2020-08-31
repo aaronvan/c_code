@@ -9,11 +9,10 @@ int main(void) {
     numPtr = &num;
     num2 = *numPtr;
 
-    printf("num = %d, numPtr = %p, address of num: %p, num2 = %d\n", num, numPtr, &num, num2);
-
-    char *names[] = {"aaron", "deede"};
-    int count = sizeof(names)/sizeof(char);
-    printf("%d\n", count);
+    printf("1. num = %d\n", num);
+    printf("2. numPtr contains the address of num = %p\n", numPtr);
+    printf("3. address of num: %p\n", &num);
+    printf("4. num2 is dereferenced *numPtr: %d\n", num2);
 
     return 0;
 }
