@@ -25,9 +25,14 @@ void gunPrint(gun_t *gun) {
     printf("Range: %d\n", gun->range);
 }
 
+void gunDestroy(gun_t *gun) {
+    free(gun);
+}
+
 int main(void) {
     gun_t *paladin = gun_make("M112", 155, 25000);
     gunPrint(paladin);
+    gunDestroy(paladin);
 
     return 0;
 }
