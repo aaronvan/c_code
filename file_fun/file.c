@@ -2,7 +2,7 @@
 #include <errno.h>
 
 int main(void) {
-    FILE *fp = fopen("noumber.txt", "r");
+    FILE *fp = fopen("number.txt", "r");
     if (!fp) {
 	perror("File open failed");
 	return -1;
