@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-    int number[4] = {0};
+    int number[4] = {8};
     char name[5] = {'a'};
 
     // first print raw arrays
@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
     name[2] = 'r';
     name[3] = 'o';
     name[4] = 'n';
-    name[5] = '\0';
+//    name[5] = '\0';
 
     // print them out initialized
     printf("4. numbers: %d%d%d%d\n", number[0], number[1], number[2], number[3]);
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
     //another way to use name
     char *me = "Aaron";
     printf("7. print with the string pointer: %s\n", me);
-    printf("8. print with each char: %c %c %c %c %c\n", me[0], me[1], me[2], me[3], me[4]);
+    printf("8. print each char: %c %c %c %c %c\n", me[0], me[1], me[2], me[3], me[4]);
 
     return 0;
 }
