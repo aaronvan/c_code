@@ -8,7 +8,7 @@ typedef struct Gun {
     int range;
 } gun_t;
 
-gun_t *gun_make(char *name, int calibre, int range) {
+gun_t *gunMake(char *name, int calibre, int range) {
     gun_t *gun = malloc(sizeof(gun_t));
     assert(gun != NULL);
 
@@ -30,7 +30,7 @@ void gunDestroy(gun_t *gun) {
 }
 
 int main(void) {
-    gun_t *paladin = gun_make("M112", 155, 25000);
+    gun_t *paladin = gunMake("Super Paladin", 155, 25000);
     gunPrint(paladin);
     gunDestroy(paladin);
 
