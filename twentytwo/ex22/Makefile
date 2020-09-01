@@ -13,7 +13,8 @@ ex22.o:	      $(FILES.h)
 ex22_main.o:  $(FILES.h)
 
 DEBRIS	  = a.out *~ *.dSYM
+RM	  = rm -fr
 
 clean:
-	rm -f $(OBJFILES) $(TARGET) $(DEBRIS) 
+	$(RM) $(OBJFILES) $(TARGET) $(DEBRIS) 
 
