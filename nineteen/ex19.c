@@ -1,15 +1,15 @@
-
-#include "dbg.h"
 #include <stdlib.h>
 #include <stdio.h>
+
+#include "dbg.h"
 
 void test_debug()
 {
     // notice you don't need the \n
-    debug("I have Brown Hair.");
+    debug("The program has reached this far.");
 
     // passing in arguments like printf
-    debug("I am %d years old.", 37);
+    debug("I am %d years old.", 56);
 }
 
 void test_log_err()
