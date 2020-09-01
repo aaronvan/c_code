@@ -1,7 +1,7 @@
 #ifndef _ex22_h
 #define _ex22_h
 
-extern int the_size;
+extern int THE_SIZE;
 
 // gets and sets an internal static variable in ex22.c
 int get_age();
