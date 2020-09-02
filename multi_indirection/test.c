@@ -2,32 +2,33 @@
 
 #define LENGTH 3
 
-int data[LENGTH];
+char *words[LENGTH];
 
 int main(int argc, char *argv[]) {
-    int *pi;
-    int **ppi;
+    char *pc;
+    char **ppc;
+
+    //initilize string array
+    words[0] = "Freakwater";
+    words[1] = "Stupendous";
+    words[2] = "Simplicissimuss";
 
     for (int i = 0; i < LENGTH; i++) {
-	data[i] = i;
+	printf("%s\n", words[i]);
     }
 
-    for (int i = 0; i < LENGTH; i++) {
-	printf("%d\n", data[i]);
-    }
+    puts("Now print each char of each string:\n");
 
-    pi = data; // set the pointer to the data identifier
-    ppi = &pi; // ppi -> pi -> data[0]
+    ppc = words; //point the pointer to the address of words which is also it's name
 
     for (int i = 0; i < LENGTH; i++) {
-	printf("\nLoop[%d] array address is %p\n", i, data);
-	printf("item pointed to by pi is %d\n", *pi);
-	printf("item pointed to by ppi is %p\n", *ppi);
-	printf("item pointed to by double indirection of ppi is %d\n\n", **ppi);
-	printf("The address of pi is %p and the value of ppi (what it points to) is %p\n\n", &pi, ppi);
-	printf("The value of pi is %p and it points to %d\n\n", pi, *pi);
-
-	pi += 1; // advance pointer o the next element of the data array
+	ppc = words + i;
+	pc = *ppc;
+	while (*pc != 0) {
+	    printf("%c ", *pc);
+	    pc += 1;
+	}
+	puts("\n");
     }
 
     return 0;
