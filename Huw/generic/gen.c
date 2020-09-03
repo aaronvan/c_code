@@ -10,6 +10,10 @@ int main(void) {
 
     // cast the pointer as an int and dereference it.
     printf("The item pointed to by gp is %d\n", *(int*)gp);
+    gp += sizeof(int);
+    printf("The item pointed to by gp is %d\n", *(int*)gp);
+    gp += sizeof(int);
+    printf("The item pointed to by gp is %d\n", *(int*)gp);
 
     return 0;
 }
