@@ -1,1 +1,1 @@
-Repo for random musings
+Repo for various C experiments. 
