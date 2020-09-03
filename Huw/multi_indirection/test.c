@@ -14,22 +14,28 @@ int main(int argc, char *argv[]) {
     words[2] = "Simplicissimuss";
 
     for (int i = 0; i < LENGTH; i++) {
-	printf("%s\n", words[i]);
+		printf("%s\n", words[i]);
     }
 
     puts("Now print each char of each string:\n");
 
-    ppc = words; //point the pointer to the address of words which is also it's name
+    ppc = words; //pointer to the pointer to the address of words; also it's name
 
     for (int i = 0; i < LENGTH; i++) {
-	ppc = words + i;
-	pc = *ppc;
-	while (*pc != 0) {
-	    printf("%c ", *pc);
-	    pc += 1;
-	}
-	puts("\n");
+		ppc = words + i;
+		pc = *ppc;
+		while (*pc != 0) {
+			printf("%c ", *pc);
+			pc += 1;
+		}
+		puts("\n");
     }
 
     return 0;
 }
+
+// words[] = { 
+//				{'F','r', 'e', 'a', 'k', 'w', 'a', 't', 'e', 'r', '\0'},
+//				{'S', 't', 'u', 'p', 'e', 'n', 'd', 'o', 'u', 's', '\0'},
+//				{'S', 'i', 'm', 'p', 'l', 'i', 'c', 'i', 's', 's', 'i', 'm', 'u', 's', 's', '\0'}
+//		   	 }
