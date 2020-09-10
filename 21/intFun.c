@@ -27,7 +27,7 @@ int main(void) {
     enum chuck day;
     day = Wednesday;
 
-    printf("%d\n", day);
+    printf("enum returns: %d\n", day);
 
     return EXIT_SUCCESS;
 }
