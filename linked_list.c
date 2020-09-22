@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SIZE 5
+#define SIZE 50
 
-typedef struct listitem {
+struct listitem {
     struct listitem *next;
     int data;
-} LISTITEM;
+};
 
 int main(void) {
-    LISTITEM *listhead = NULL;
-    LISTITEM *temp = NULL;
+    struct listitem *listhead = NULL;
+    struct listitem *temp = NULL;
 
     // populate the list
     for (int i = 0; i < SIZE; i++) {
-	temp = malloc(sizeof(LISTITEM));
+	temp = malloc(sizeof(struct listitem));
 	temp->data = i;
 	temp->next = listhead;
 	listhead = temp;
