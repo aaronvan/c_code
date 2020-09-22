@@ -3,23 +3,23 @@
 
 #define SIZE 6 
 
-typedef struct listitem {
+struct listitem {
     struct listitem  *next;
     struct listitem  *prev;
-    int		      data;
-} LISTITEM;
+    int data;
+};
 
 int main(void) {
-    LISTITEM *temp = NULL;
-    LISTITEM head; // not a pointer
-
-    head.next = (LISTITEM *) &head;
-    head.prev = (LISTITEM *) &head;
-    head.data = -1; // head isn't part of the list
+    struct listitem *temp = NULL;
+    struct listitem head;
+    head.next = &head;
+    head.prev = &head;
+    head.data = -1;
+	
 
     // populate the list
     for (int i = 0; i < SIZE; i++) {
-		temp = malloc(sizeof(LISTITEM));
+		temp = malloc(sizeof(struct listitem));
 		temp->data = i;
 		temp->next = head.next;
 		head.next = temp;
@@ -30,14 +30,14 @@ int main(void) {
     // going forward
     temp = head.next;
     while (temp != &head) {
-		printf("forward list item: current is %p; next is %p; prev is %p; data is %d\n", temp, temp->next, temp->prev, temp->data);
+		printf("item: current %p; next %p; prev %p; data %d\n", temp, temp->next, temp->prev, temp->data);
 		temp = temp->next; // move to the next item
     }
 
     // go backward
     temp = head.prev;
     while (temp != &head) {
-		printf("backward list item: current is %p; next is %p; prev is %p; data is %d\n", temp, temp->next, temp->prev, temp->data);
+		printf("item: current %p; next %p; prev %p; data %d\n", temp, temp->next, temp->prev, temp->data);
 		temp = temp->prev; // move to the previous item
     }
 
