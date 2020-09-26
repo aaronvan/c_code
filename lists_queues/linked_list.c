@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SIZE 50
+#define SIZE 5
 
 struct listitem {
     struct listitem *next;

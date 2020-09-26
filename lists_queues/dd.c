@@ -26,7 +26,7 @@ int main(void) {
 		temp = malloc(sizeof(struct listitem));
 		temp->data = i;
 		temp->next = head.first;
-		head.first= temp;
+		head.first = temp;
 		temp->prev = (struct listitem *)&head;
 		temp->next->prev = temp;
     }
